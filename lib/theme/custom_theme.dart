@@ -8,7 +8,7 @@ class CustomTheme {
     return ThemeData(
       brightness: Brightness.dark,
       primarySwatch: MaterialColor(
-        Palette.blue500.value,
+        Palette.blue100.value,
         const {
           100: Palette.blue100,
           200: Palette.blue200,
@@ -21,18 +21,20 @@ class CustomTheme {
           900: Palette.blue900,
         },
       ),
-      hintColor: Palette.blue500,
-      scaffoldBackgroundColor: Palette.almostLight,
+      colorScheme: theme.colorScheme.copyWith(
+        primary: Palette.blue500
+      ),
+      scaffoldBackgroundColor: Palette.almostBlack,
       appBarTheme: const AppBarTheme(
         elevation: 0,
-        color: Palette.almostLight,
+        color: Palette.almostBlack,
       ),
       textTheme: theme.primaryTextTheme
           .copyWith(
-            labelMedium: theme.primaryTextTheme.labelMedium?.copyWith(
+            labelMedium: theme.primaryTextTheme.labelLarge?.copyWith(
                 color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
           )
-          .apply(displayColor: Colors.black),
+          .apply(displayColor: Colors.white),
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(backgroundColor: Palette.blue500)),
     );

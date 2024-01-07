@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Movie Recomendation',
       theme: CustomTheme.dark(context),
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       home: const MovieFlow(),
     );
   }
