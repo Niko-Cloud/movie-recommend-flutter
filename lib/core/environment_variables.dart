@@ -1,0 +1,1 @@
+const api = String.fromEnvironment("apiKey", defaultValue: 'a15865b20be65226c0172c0c322c3d42');

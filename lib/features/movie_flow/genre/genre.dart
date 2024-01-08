@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:equatable/equatable.dart';
+import 'genre_entity.dart';
 
 @immutable
 class Genre extends Equatable {
@@ -9,15 +10,14 @@ class Genre extends Equatable {
   final bool isSelected;
   final int id;
 
-
-  Genre toggleSelected(){
-    return Genre(name: name,id: id, isSelected: !isSelected);
+  factory Genre.fromEntity(GenreEntity entity) {
+    return Genre(name: entity.name, id: entity.id, isSelected: false);
   }
 
-  @override
-  String toString() => "Genre(name: $name, isSelected: $isSelected, id: $id)";
+  Genre toggleSelected() {
+    return Genre(name: name, id: id, isSelected: !isSelected);
+  }
 
   @override
   List<Object> get props => [name, isSelected, id];
 }
-
