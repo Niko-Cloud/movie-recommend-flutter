@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:movie_recomendation/core/constant.dart';
 import 'package:movie_recomendation/core/widgets/primary_button.dart';
@@ -45,7 +44,6 @@ class _GenreScreenState extends State<GenreScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(
-          color: Colors.black,
           onPressed: widget.previousPage,
         ),
       ),

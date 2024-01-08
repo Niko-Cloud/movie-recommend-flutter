@@ -29,6 +29,17 @@ class CustomTheme {
         elevation: 0,
         color: Palette.almostBlack,
       ),
+      sliderTheme: SliderThemeData(
+        activeTrackColor: Colors.white,
+        inactiveTrackColor: Colors.blueGrey,
+        inactiveTickMarkColor: Colors.transparent,
+        activeTickMarkColor: Colors.transparent,
+        thumbColor: Colors.white,
+        overlayColor: Colors.white.withOpacity(0.2),
+        trackHeight: 2,
+        thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
+        overlayShape: const RoundSliderOverlayShape(overlayRadius: 20),
+      ),
       textTheme: theme.primaryTextTheme
           .copyWith(
             labelMedium: theme.primaryTextTheme.labelLarge?.copyWith(
